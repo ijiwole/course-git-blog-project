@@ -127,7 +127,7 @@ def trip_duration_stats(df):
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-' * 40)
-
+    # This code was used to dispalay the total time travel. mathemattically, total time travel/mean total time travel.
 
 def user_stats(df):
     """Displays statistics on bikeshare users."""
@@ -215,7 +215,7 @@ def main():
         if restart.lower() != 'yes':
             print("You're Welcome!!".center(50,'-'))
             break
-
+# This code was used to display the city, time day and month we are working with.
 
 if __name__ == "__main__":
     main() 
