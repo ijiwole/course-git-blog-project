@@ -6,7 +6,6 @@ CITY_DATA = {'chicago': 'chicago.csv',
              'new york city': 'new_york_city.csv',
              'washington': 'washington.csv'}
 
-
 def get_filters():
     """
     Asks user to specify a city, month, and day to analyze.
@@ -173,14 +172,17 @@ def main():
     while True:
         city, month, day = get_filters()
         df = load_data(city, month, day)
+        
         choice = input("Do you want to see the time stats of {} (Yes/No) : ".format(city)).lower()
         while choice not in ['yes','no']:
             print("Enter a Valid Input!!!")
+            
             choice = input("Do you want to see the time stats of {} (Yes/No) : ".format(city)).lower()
         if choice == 'yes': time_stats(df)
         choice = input("Do you want to see the station stats of {} (Yes/No) : ".format(city)).lower()
         while choice not in ['yes', 'no']:
             print("Enter a Valid Input!!!")
+            
             choice = input("Do you want to see the station stats of {} (Yes/No) : ".format(city)).lower()
         if choice == 'yes': station_stats(df)
         choice = input("Do you want to see the trip duration stats of {} (Yes/No) : ".format(city)).lower()
@@ -191,10 +193,12 @@ def main():
         choice = input("Do you want to see the user stats of {} (Yes/No) : ".format(city)).lower()
         while choice not in ['yes', 'no']:
             print("Enter a Valid Input!!!")
+            
             choice = input("Do you want to see the user stats of {} (Yes/No) : ".format(city)).lower()
         if choice == 'yes': user_stats(df)
         start = 0
         while True:
+        
             if start == 0:
                 choice = input("Do you want to see 5 lines of raw data of {} (Yes/No) : ".format(city)).lower()
                 while choice not in ['yes', 'no']:
